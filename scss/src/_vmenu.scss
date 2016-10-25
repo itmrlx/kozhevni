@@ -1,0 +1,103 @@
+$vmenu-bg: #bea58b;
+$vmenu-bg-sub: #8b7667;
+$vmenu-bd-color: #fff;
+$vmenu-text-color: #fff;
+
+.pro-vmenu, .pro-vmenu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: $vmenu-bg;
+}
+.pro-vmenu{
+	ul{
+		background: $vmenu-bg-sub;
+		padding-left: 15px;
+	}
+	>li{
+		border-bottom: 1px solid $vmenu-bd-color;
+		&.current-menu-item,
+		&:hover{
+			>a{
+				background: darken($vmenu-bg,10%);
+				text-decoration: none;
+			}
+		}
+	}
+	li{
+		display: block;
+		position: relative;
+		a{
+			display: block;
+			position: relative;
+			padding: 14px 60px 14px 20px;
+			font-size: 14px;
+			color: $vmenu-text-color;
+			transition: all .3s;
+		}
+	}
+}
+
+.pro-vmenu li.menu-item-has-children > a > span{
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -16px;
+	padding: 0;
+	height: 32px;
+	width: 32px;
+	background: darken($vmenu-bg,15%);
+	border-radius: 50%;
+	&:hover{
+		background: #fff;
+		-webkit-transition: all 0.1s ease-out;
+		-moz-transition: all 0.1s ease-out;
+		-ms-transition: all 0.1s ease-out;
+		-o-transition: all 0.1s ease-out;
+		transition: all 0.1s ease-out;
+		&:after,&:before{
+			background: darken($vmenu-bg,15%);
+		}
+	}
+}
+.pro-vmenu li.menu-item-has-children > a > span:after {
+	position: absolute;
+	right: 15px;
+	top: 11px;
+	z-index: 5;
+	display: block;
+	height: 10px;
+	width: 2px;
+	background: #ffffff;
+	content: "";
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+.pro-vmenu li.menu-item-has-children > a > span:before {
+	position: absolute;
+	right: 11px;
+	top: 15px;
+	display: block;
+	width: 10px;
+	height: 2px;
+	background: #ffffff;
+	content: "";
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+.pro-vmenu li.menu-item-has-children.open > a span:after,
+.pro-vmenu li.menu-item-has-children.open > a span:before{
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

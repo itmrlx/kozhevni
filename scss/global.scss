@@ -1,0 +1,66 @@
+// sources
+@import 'src/_wordpress.scss'; // wp classes
+@import 'src/_jquery.fancybox.scss'; // fancybox
+@import 'src/_slick.scss'; // slick slider
+@import 'src/_vmenu.scss'; // vertical menu
+// modules
+
+// utilites
+.wrapper{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	min-width: 320px;
+}
+.container{
+	min-width: 320px;
+}
+.webber{
+	img{
+		height: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+// buttons
+.btn{
+	transition: all .3s;
+}
+.btn-primary{
+	background-color: #e9df5f;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 3px 0 #847f3c;
+	color: #000;
+	&.big{
+		padding: 10px 30px;
+	}
+	&:hover{
+		background-color: darken(#e9df5f,10%);
+		color: #000;
+		position: relative;
+		box-shadow: none;
+		border: none;
+		transform: translateY(3px);
+	}
+}
+
+// titles
+.stroke-title{
+	text-align: center;
+	background-image: url(../img/stroke.png);
+	background-position: 50% 50%;
+	background-repeat: repeat-x;
+	span{
+		display: inline-block;
+		background: #f9f9fb;
+		padding: 10px 33px;
+		font-size: 43px;
+		font-weight: 600;
+		color: #3b3b3c;
+		@media (max-width: 767px) {
+			font-size: 23px;
+		}
+	}
+}
