@@ -62,7 +62,7 @@
 		<div class="centered">
 			<?php $lang_slutsk = icl_get_languages(); ?>
 			<?php if($lang_slutsk[ru][active] == 1): ?>
-				<a href="/ru/category/news" class="btn btn-primary big">Смотреть больше</a>
+				<a href="/category/news" class="btn btn-primary big">Смотреть больше</a>
 			<?php elseif($lang_slutsk[en][active] == 1): ?>
 				<a href="/en/category/news-en" class="btn btn-primary big">See more</a>
 			<?php endif; ?>
